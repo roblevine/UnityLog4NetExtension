@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLoggingExtensions", "UnityLoggingExtensions\UnityLoggingExtensions.csproj", "{F689CC78-232B-4E2B-8799-2CFB58FD1695}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLoggingExtensions.Specs", "UnityLoggingExtensions.Specs\UnityLoggingExtensions.Specs.csproj", "{83BC3A6D-9DB3-4BFA-817A-9BB4128BD357}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{78427C6D-EDB8-4867-80A1-7299D4B23018}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F689CC78-232B-4E2B-8799-2CFB58FD1695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F689CC78-232B-4E2B-8799-2CFB58FD1695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F689CC78-232B-4E2B-8799-2CFB58FD1695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F689CC78-232B-4E2B-8799-2CFB58FD1695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83BC3A6D-9DB3-4BFA-817A-9BB4128BD357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BC3A6D-9DB3-4BFA-817A-9BB4128BD357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BC3A6D-9DB3-4BFA-817A-9BB4128BD357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BC3A6D-9DB3-4BFA-817A-9BB4128BD357}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal
