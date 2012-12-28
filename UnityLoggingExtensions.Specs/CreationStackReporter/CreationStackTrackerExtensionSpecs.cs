@@ -1,4 +1,28 @@
-﻿namespace UnityLoggingExtensions.Specs.CreationStackReporter
+﻿#region Copyright & License
+
+// This software is licensed under the MIT License
+// 
+// Copyright (C) 2012, Rob Levine
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy 
+// of this software and associated documentation files (the "Software"), 
+// to deal in the Software without restriction, including without limitation 
+// the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+// and/or sell copies of the Software, and to permit persons to whom the 
+// Software is furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in 
+// all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
+// IN THE SOFTWARE.
+#endregion
+namespace UnityLoggingExtensions.Specs.CreationStackReporter
 {
     using Machine.Specifications;
 
@@ -7,6 +31,7 @@
     using UnityLoggingExtensions.CreationStackReporter;
     using UnityLoggingExtensions.CreationStackTracker;
 
+    [Subject(typeof(CreationStackReporterExtension))]
     public class when_a_class_with_a_single_ctor_param_of_UnityObjectCreationStack_is_constructed : CreationStackReporterSpecsContext
     {
         private Establish establish = () =>
@@ -23,6 +48,7 @@
         private It then_previous_item_on_call_stack_should_be_the_parent_class_requiring_this_dependency = () => classRequiringInterceptedDependency.UnityObjectCreationStack.Peek(1).FullName.ShouldEqual(typeof(ClassWithCtor_UnityObjectCreationStack).FullName);
     }
 
+    [Subject(typeof(CreationStackReporterExtension))]
     public class when_a_class_with_a_two_ctor_param_of_string_and_UnityObjectCreationStack__is_constructed : CreationStackReporterSpecsContext
     {
         private Establish establish = () =>
@@ -51,7 +77,8 @@
             unityContainer.AddNewExtension<CreationStackReporterExtension>();
         };
     }
-
+    
+    [Subject(typeof(CreationStackReporterExtension))]
     public class when_a_class_heirachy_is_created_with_monitoring_stack_dependency_at_depth_of_third_level
     {
         private static UnityContainer unityContainer;

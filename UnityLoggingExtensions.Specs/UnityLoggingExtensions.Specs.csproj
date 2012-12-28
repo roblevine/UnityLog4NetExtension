@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Machine.Specifications">
       <HintPath>..\packages\Machine.Specifications.0.5.10\lib\net40\Machine.Specifications.dll</HintPath>
     </Reference>
@@ -66,7 +69,10 @@
     <Compile Include="CreationStackReporter\SimpleClass.cs" />
     <Compile Include="CreationStackReporter\ThreeLevelHeirarchyClass.cs" />
     <Compile Include="CreationStackReporter\CreationStackTrackerExtensionSpecs.cs" />
+    <Compile Include="Log4Net\ClassWithSingleILogDependency.cs" />
     <Compile Include="Log4Net\Log4NetExtensionSpecs.cs" />
+    <Compile Include="Log4Net\SimpleClass.cs" />
+    <Compile Include="Log4Net\ThreeLevelHeirarchyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

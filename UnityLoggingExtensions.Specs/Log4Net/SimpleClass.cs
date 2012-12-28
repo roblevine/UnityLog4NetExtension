@@ -22,35 +22,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
 // IN THE SOFTWARE.
 #endregion
-
-namespace UnityLoggingExtensions.CreationStackTracker
+namespace UnityLoggingExtensions.Specs.Log4Net
 {
-    using System;
-
-    /// <summary>
-    /// </summary>
-    public class CreationStackTrackerPolicy : ICreationStackTrackerPolicy
+    public class SimpleClass
     {
-        #region Fields
-
-        /// <summary>
-        /// </summary>
-        private readonly PeekableStack<Type> typeStack = new PeekableStack<Type>();
-
-        #endregion
-
-        #region Public Properties
-
-        /// <summary>
-        /// </summary>
-        public PeekableStack<Type> TypeStack
-        {
-            get
-            {
-                return this.typeStack;
-            }
-        }
-
-        #endregion
     }
 }
