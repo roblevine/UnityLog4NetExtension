@@ -27,7 +27,7 @@ http://stackoverflow.com/questions/6846342/how-to-inject-log4net-ilog-implementa
 http://davidkeaveny.blogspot.co.uk/2011/03/unity-and-log4net.html
 http://blog.baltrinic.com/software-development/dotnet/log4net-integration-with-unity-ioc-container
 
-The solutions discussed and presented in these articles (in particular the last one), inspired my to write this extension as an improvement over Kenneth Baltrinic's documented solution. Although his suggested solution works - it involves some stack walking to identify the `Type` of the logger to create. I felt that this should be available from within Unity itself without the need to resort to handling `StackTrace`/`StackFrame` classes.
+The solutions discussed and presented in these articles (in particular the last one), inspired me to write this extension as an improvement over Kenneth Baltrinic's documented solution. Although his suggested solution works - it involves some stack walking to identify the `Type` of the logger to create. I felt that this should be available from within Unity itself without the need to resort to handling `StackTrace`/`StackFrame` classes.
 
 In order to acheive the desired end result, three extensions have been written. Two are directly related to this, and one to help with testing:
 
@@ -39,3 +39,5 @@ Relying on the extension above, this intercepts any request for an `ILog` instan
 
 **CreationStackReporterExtension**
 Relying on the _CreationStackTrackerExtension_ extension above, this extension will resolve any dependency of type `UnityObjectCreationStack`, and inject an instance that has a copy of the object creation stack, as maintained by _CreationStackTrackerExtension_.
+
+See http://roblevine.co.uk/net/using-log4net-with-unity/ for more info.
