@@ -37,7 +37,27 @@ This extension is responsible for mainting a stack of the type creation heirarch
 **Log4NetExtension**
 Relying on the extension above, this intercepts any request for an `ILog` instance and creates an `ILog` instance by calling `LogManager.GetLogger(Type t)` using the type of the parent class (ie the class the logger is being injected into)
 
+This can be registered as follows:
+
+    var container = new UnityContainer();
+    container.AddNewExtension<Log4NetExtension>();
+
+Once registered, any `ILog` dependencies will resolve to a log4net logger with a type name matching the type it will be injected into.
+
 **CreationStackReporterExtension**
 Relying on the _CreationStackTrackerExtension_ extension above, this extension will resolve any dependency of type `UnityObjectCreationStack`, and inject an instance that has a copy of the object creation stack, as maintained by _CreationStackTrackerExtension_.
 
+    var container = new UnityContainer();
+    container.AddNewExtension<CreationStackReporterExtension>();
+
+Once registered, any `UnityObjectCreationStack` dependencies will resolve to an instance that contains the type creation stack
+
+    public class MyClass
+    {
+        public MyClass(UnityObjectCreationStack unityObjectCreationStack)
+        {
+
+        }
+    }
+    
 See http://blog.roblevine.co.uk/net/using-log4net-with-unity/ for more info.
