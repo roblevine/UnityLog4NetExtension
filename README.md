@@ -40,4 +40,4 @@ Relying on the extension above, this intercepts any request for an `ILog` instan
 **CreationStackReporterExtension**
 Relying on the _CreationStackTrackerExtension_ extension above, this extension will resolve any dependency of type `UnityObjectCreationStack`, and inject an instance that has a copy of the object creation stack, as maintained by _CreationStackTrackerExtension_.
 
-See http://roblevine.co.uk/net/using-log4net-with-unity/ for more info.
+See http://blog.roblevine.co.uk/net/using-log4net-with-unity/ for more info.
