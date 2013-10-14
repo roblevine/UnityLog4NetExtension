@@ -7,6 +7,7 @@
     <authors>Rob Levine</authors>
     <owners>Rob Levine</owners>
     <projectUrl>http://blog.roblevine.co.uk/net/using-log4net-with-unity/</projectUrl>
+    <licenseUrl>https://github.com/roblevine/UnityLoggingExtensions/blob/master/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Initial NuGet package.</releaseNotes>
