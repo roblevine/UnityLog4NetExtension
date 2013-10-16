@@ -47,7 +47,9 @@ namespace UnityLoggingExtensions.CreationStackTracker
             if (policy.TypeStack.Count > 0)
             {
                 policy.TypeStack.Pop();
+#if DEBUG
                 Console.WriteLine("POP: {0} [{1}]", context.BuildKey.Type, this.ReportStack(policy.TypeStack));
+#endif
             }
 
             base.PostBuildUp(context);
@@ -67,7 +69,9 @@ namespace UnityLoggingExtensions.CreationStackTracker
             }
 
             policy.TypeStack.Push(context.BuildKey.Type);
+#if DEBUG
             Console.WriteLine("PUSH: {0} [{1}]", context.BuildKey.Type, this.ReportStack(policy.TypeStack));
+#endif
 
             base.PreBuildUp(context);
         }
