@@ -32,7 +32,9 @@ namespace UnityLoggingExtensions.Specs.CreationStackReporter
     {
         public ClassWithCtor_UnityObjectCreationStack(UnityObjectCreationStack unityObjectCreationStack)
         {
+#if DEBUG
             Console.WriteLine("Ctor: ClassWithCtor_UnityObjectCreationStack");
+#endif
             this.UnityObjectCreationStack = unityObjectCreationStack;
         }
 
