@@ -38,10 +38,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("UnityLog4NetExtension")]
-[assembly:
-    AssemblyDescription(
-        "A simple extension to Unity that enables log4net ILog dependencies to be injected into consuming classes, with the ILog instance being configured as the correct logger for the consuming class."
-        )]
+[assembly: AssemblyDescription("A simple extension to Unity that enables log4net ILog dependencies to be injected into consuming classes, with the ILog instance being configured as the correct logger for the consuming class.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("INEX Solutions Ltd")]
 [assembly: AssemblyProduct("UnityLog4NetExtension")]
