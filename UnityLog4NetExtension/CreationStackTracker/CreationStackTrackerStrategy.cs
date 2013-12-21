@@ -2,7 +2,9 @@
 
 // This software is licensed under the MIT License
 // 
-// Copyright (C) 2012, Rob Levine
+// 
+// Copyright (C) 2012-13, Rob Levine
+// 
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), 
@@ -11,8 +13,10 @@
 // and/or sell copies of the Software, and to permit persons to whom the 
 // Software is furnished to do so, subject to the following conditions:
 // 
+// 
 // The above copyright notice and this permission notice shall be included in 
 // all copies or substantial portions of the Software.
+// 
 // 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
@@ -21,15 +25,17 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
 // IN THE SOFTWARE.
+// 
+// [Source code: https://github.com/roblevine/UnityLoggingExtensions]
+
 #endregion
+
+using System;
+using System.Linq;
+using Microsoft.Practices.ObjectBuilder2;
 
 namespace UnityLog4NetExtension.CreationStackTracker
 {
-    using System;
-    using System.Linq;
-
-    using Microsoft.Practices.ObjectBuilder2;
-
     /// <summary>
     /// </summary>
     public class CreationStackTrackerStrategy : BuilderStrategy
@@ -61,7 +67,7 @@ namespace UnityLog4NetExtension.CreationStackTracker
             var policy = context.Policies.Get<ICreationStackTrackerPolicy>(buildKey: null, localOnly: true);
             if (policy == null)
             {
-                context.Policies.Set(typeof(ICreationStackTrackerPolicy), new CreationStackTrackerPolicy(), null);
+                context.Policies.Set(typeof (ICreationStackTrackerPolicy), new CreationStackTrackerPolicy(), null);
                 policy = context.Policies.Get<ICreationStackTrackerPolicy>(buildKey: null, localOnly: true);
             }
 

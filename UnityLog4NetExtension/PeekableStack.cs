@@ -2,7 +2,9 @@
 
 // This software is licensed under the MIT License
 // 
-// Copyright (C) 2012, Rob Levine
+// 
+// Copyright (C) 2012-13, Rob Levine
+// 
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), 
@@ -11,8 +13,10 @@
 // and/or sell copies of the Software, and to permit persons to whom the 
 // Software is furnished to do so, subject to the following conditions:
 // 
+// 
 // The above copyright notice and this permission notice shall be included in 
 // all copies or substantial portions of the Software.
+// 
 // 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
@@ -21,12 +25,15 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
 // IN THE SOFTWARE.
+// 
+// [Source code: https://github.com/roblevine/UnityLoggingExtensions]
+
 #endregion
+
+using System.Collections.Generic;
 
 namespace UnityLog4NetExtension
 {
-    using System.Collections.Generic;
-
     /// <summary>
     /// </summary>
     /// <typeparam name="T">
@@ -47,7 +54,7 @@ namespace UnityLog4NetExtension
         /// </summary>
         public PeekableStack()
         {
-            this.list = new List<T>();
+            list = new List<T>();
         }
 
         /// <summary>
@@ -56,7 +63,7 @@ namespace UnityLog4NetExtension
         /// </param>
         public PeekableStack(IEnumerable<T> initialItems)
         {
-            this.list = new List<T>(initialItems);
+            list = new List<T>(initialItems);
         }
 
         #endregion
@@ -67,20 +74,14 @@ namespace UnityLog4NetExtension
         /// </summary>
         public int Count
         {
-            get
-            {
-                return this.list.Count;
-            }
+            get { return list.Count; }
         }
 
         /// <summary>
         /// </summary>
         public IEnumerable<T> Items
         {
-            get
-            {
-                return this.list.ToArray();
-            }
+            get { return list.ToArray(); }
         }
 
         #endregion
@@ -95,8 +96,8 @@ namespace UnityLog4NetExtension
         /// </returns>
         public T Peek(int depth)
         {
-            var index = this.list.Count - 1 - depth;
-            return this.list[index];
+            var index = list.Count - 1 - depth;
+            return list[index];
         }
 
         /// <summary>
@@ -105,9 +106,9 @@ namespace UnityLog4NetExtension
         /// </returns>
         public T Pop()
         {
-            var index = this.list.Count - 1;
-            T ret = this.list[index];
-            this.list.RemoveAt(index);
+            var index = list.Count - 1;
+            T ret = list[index];
+            list.RemoveAt(index);
             return ret;
         }
 
@@ -117,7 +118,7 @@ namespace UnityLog4NetExtension
         /// </param>
         public void Push(T obj)
         {
-            this.list.Add(obj);
+            list.Add(obj);
         }
 
         #endregion
