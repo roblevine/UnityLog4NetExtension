@@ -23,7 +23,7 @@
 // IN THE SOFTWARE.
 #endregion
 
-namespace UnityLoggingExtensions.CreationStackTracker
+namespace UnityLog4NetExtension.CreationStackTracker
 {
     using System;
     using System.Linq;

@@ -22,14 +22,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
 // IN THE SOFTWARE.
 #endregion
-namespace UnityLoggingExtensions.Specs.CreationStackReporter
+namespace UnityLog4NetExtension.Specs.CreationStackReporter
 {
     using Machine.Specifications;
 
     using Microsoft.Practices.Unity;
 
-    using UnityLoggingExtensions.CreationStackReporter;
-    using UnityLoggingExtensions.CreationStackTracker;
+    using UnityLog4NetExtension.CreationStackReporter;
+    using UnityLog4NetExtension.CreationStackTracker;
 
     [Subject(typeof(CreationStackReporterExtension))]
     public class when_a_class_with_a_single_ctor_param_of_UnityObjectCreationStack_is_constructed : CreationStackReporterSpecsContext

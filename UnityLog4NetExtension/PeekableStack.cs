@@ -23,7 +23,7 @@
 // IN THE SOFTWARE.
 #endregion
 
-namespace UnityLoggingExtensions
+namespace UnityLog4NetExtension
 {
     using System.Collections.Generic;
 

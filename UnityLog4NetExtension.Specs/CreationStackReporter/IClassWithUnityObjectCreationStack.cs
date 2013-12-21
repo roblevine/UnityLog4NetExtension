@@ -22,9 +22,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
 // IN THE SOFTWARE.
 #endregion
-namespace UnityLoggingExtensions.Specs.CreationStackReporter
+namespace UnityLog4NetExtension.Specs.CreationStackReporter
 {
-    using UnityLoggingExtensions.CreationStackTracker;
+    using UnityLog4NetExtension.CreationStackTracker;
 
     public interface IClassWithUnityObjectCreationStack
     {

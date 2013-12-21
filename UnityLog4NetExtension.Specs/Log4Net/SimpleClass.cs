@@ -22,7 +22,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
 // IN THE SOFTWARE.
 #endregion
-namespace UnityLoggingExtensions.Specs.Log4Net
+namespace UnityLog4NetExtension.Specs.Log4Net
 {
     public class SimpleClass
     {

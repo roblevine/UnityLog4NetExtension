@@ -23,14 +23,14 @@
 // IN THE SOFTWARE.
 #endregion
 
-namespace UnityLoggingExtensions.Specs.Log4Net
+namespace UnityLog4NetExtension.Specs.Log4Net
 {
     using Machine.Specifications;
 
     using Microsoft.Practices.Unity;
 
-    using UnityLoggingExtensions.CreationStackReporter;
-    using UnityLoggingExtensions.Log4Net;
+    using UnityLog4NetExtension.CreationStackReporter;
+    using UnityLog4NetExtension.Log4Net;
 
     [Subject(typeof(Log4NetExtension))]
     public class when_a_class_taking_a_single_ILog_dependency_is_created_via_unity

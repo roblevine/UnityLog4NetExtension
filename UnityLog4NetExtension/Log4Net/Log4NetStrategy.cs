@@ -23,13 +23,13 @@
 // IN THE SOFTWARE.
 #endregion
 
-namespace UnityLoggingExtensions.Log4Net
+namespace UnityLog4NetExtension.Log4Net
 {
     using log4net;
 
     using Microsoft.Practices.ObjectBuilder2;
 
-    using UnityLoggingExtensions.CreationStackTracker;
+    using UnityLog4NetExtension.CreationStackTracker;
 
     /// <summary>
     /// </summary>

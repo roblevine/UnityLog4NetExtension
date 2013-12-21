@@ -23,12 +23,12 @@
 // IN THE SOFTWARE.
 #endregion
 
-namespace UnityLoggingExtensions.CreationStackReporter
+namespace UnityLog4NetExtension.CreationStackReporter
 {
     using Microsoft.Practices.Unity;
     using Microsoft.Practices.Unity.ObjectBuilder;
 
-    using UnityLoggingExtensions.CreationStackTracker;
+    using UnityLog4NetExtension.CreationStackTracker;
 
     /// <summary>
     /// </summary>
