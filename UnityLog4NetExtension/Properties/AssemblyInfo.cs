@@ -29,11 +29,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UnityLoggingExtensions")]
+[assembly: AssemblyTitle("UnityLog4NetExtension")]
 [assembly: AssemblyDescription("A simple extension to Unity that enables log4net ILog dependencies to be injected into consuming classes, with the ILog instance being configured as the correct logger for the consuming class.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("INEX Solutions Ltd")]
-[assembly: AssemblyProduct("UnityLoggingExtensions")]
+[assembly: AssemblyProduct("UnityLog4NetExtension")]
 [assembly: AssemblyCopyright("Copyright © INEX Solutions Ltd 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
