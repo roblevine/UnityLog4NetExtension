@@ -88,7 +88,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UnityLoggingExtensions\UnityLoggingExtensions.csproj">
+    <ProjectReference Include="..\UnityLog4NetExtension\UnityLog4NetExtension.csproj">
       <Project>{F689CC78-232B-4E2B-8799-2CFB58FD1695}</Project>
       <Name>UnityLoggingExtensions</Name>
     </ProjectReference>

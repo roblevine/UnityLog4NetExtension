@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLoggingExtensions", "UnityLoggingExtensions\UnityLoggingExtensions.csproj", "{F689CC78-232B-4E2B-8799-2CFB58FD1695}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLog4NetExtension", "UnityLog4NetExtension\UnityLog4NetExtension.csproj", "{F689CC78-232B-4E2B-8799-2CFB58FD1695}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLoggingExtensions.Specs", "UnityLoggingExtensions.Specs\UnityLoggingExtensions.Specs.csproj", "{83BC3A6D-9DB3-4BFA-817A-9BB4128BD357}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLog4NetExtension.Specs", "UnityLog4NetExtension.Specs\UnityLog4NetExtension.Specs.csproj", "{83BC3A6D-9DB3-4BFA-817A-9BB4128BD357}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{78427C6D-EDB8-4867-80A1-7299D4B23018}"
 	ProjectSection(SolutionItems) = preProject
