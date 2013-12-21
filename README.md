@@ -62,6 +62,9 @@ Once registered, any `UnityObjectCreationStack` dependencies will resolve to an 
     
 See http://blog.roblevine.co.uk/net/using-log4net-with-unity/ for more info.
 
+NOTE: This is now available as a NuGet package: 
+https://www.nuget.org/packages/UnityLog4NetExtension/
+
 NOTE: Tests are written using Machine Specifications [https://github.com/machine/machine.specifications]. If you are using ReSharper as your test runner, you'll need to run the following batch file to get MSpec to work with the ReSharper runner:
 
 `UnityLoggingExtensions\packages\Machine.Specifications.0.5.10\tools\InstallResharperRunner.x.x.bat`
