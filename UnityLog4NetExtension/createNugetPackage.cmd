@@ -1,0 +1,1 @@
+..\.nuget\nuget.exe pack UnityLog4NetExtension.csproj

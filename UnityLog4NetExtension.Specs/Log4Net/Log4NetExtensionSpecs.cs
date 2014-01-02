@@ -3,7 +3,7 @@
 // This software is licensed under the MIT License
 // 
 // 
-// Copyright (C) 2012-13, Rob Levine
+// Copyright (C) 2012-14, Rob Levine
 // 
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
@@ -43,18 +43,17 @@ namespace UnityLog4NetExtension.Specs.Log4Net
 
         private static ClassWithSingleILogDependency classWithDependency;
 
-        private Because because = () => classWithDependency = container.Resolve<ClassWithSingleILogDependency>();
-
-        private Establish establish = () =>
+        Establish establish = () =>
         {
             container = new UnityContainer();
             container.AddNewExtension<Log4NetExtension>();
         };
 
-        private It the_injected_logger_has_a_name_corresponding_to_the_type_it_is_being_injected_into =
-            () => classWithDependency.Logger.Logger.Name.ShouldEqual(typeof (ClassWithSingleILogDependency).FullName);
+        Because because = () => classWithDependency = container.Resolve<ClassWithSingleILogDependency>();
 
-        private It the_injected_logger_is_not_null = () => classWithDependency.Logger.ShouldNotBeNull();
+        It the_injected_logger_has_a_name_corresponding_to_the_type_it_is_being_injected_into = () => classWithDependency.Logger.Logger.Name.ShouldEqual(typeof (ClassWithSingleILogDependency).FullName);
+
+        It the_injected_logger_is_not_null = () => classWithDependency.Logger.ShouldNotBeNull();
     }
 
     [Subject(typeof (Log4NetExtension))]
@@ -64,21 +63,20 @@ namespace UnityLog4NetExtension.Specs.Log4Net
 
         private static ClassWithTwoDependencies_SimpleClass_and_ILog classWithDependency;
 
-        private Because because =
-            () => classWithDependency = container.Resolve<ClassWithTwoDependencies_SimpleClass_and_ILog>();
-
-        private Establish establish = () =>
+        Establish establish = () =>
         {
             container = new UnityContainer();
             container.AddNewExtension<Log4NetExtension>();
         };
 
-        private It the_injected_logger_has_a_name_corresponding_to_the_type_it_is_being_injected_into =
+        Because because = () => classWithDependency = container.Resolve<ClassWithTwoDependencies_SimpleClass_and_ILog>();
+
+        It the_injected_logger_has_a_name_corresponding_to_the_type_it_is_being_injected_into =
             () =>
                 classWithDependency.Logger.Logger.Name.ShouldEqual(
                     typeof (ClassWithTwoDependencies_SimpleClass_and_ILog).FullName);
 
-        private It the_injected_logger_is_not_null = () => classWithDependency.Logger.ShouldNotBeNull();
+        It the_injected_logger_is_not_null = () => classWithDependency.Logger.ShouldNotBeNull();
     }
 
     [Subject(typeof (Log4NetExtension))]
@@ -88,19 +86,16 @@ namespace UnityLog4NetExtension.Specs.Log4Net
 
         private static TopLevel classWithDependency;
 
-        private Because because = () => classWithDependency = container.Resolve<TopLevel>();
-
-        private Establish establish = () =>
+        Establish establish = () =>
         {
             container = new UnityContainer();
             container.AddNewExtension<Log4NetExtension>();
         };
 
-        private It the_injected_logger_has_a_name_corresponding_to_the_type_it_is_being_injected_into =
-            () =>
-                classWithDependency.SecondLevel.ThirdLevel.Logger.Logger.Name.ShouldEqual(typeof (ThirdLevel).FullName);
+        Because because = () => classWithDependency = container.Resolve<TopLevel>();
 
-        private It the_injected_logger_is_not_null =
-            () => classWithDependency.SecondLevel.ThirdLevel.Logger.ShouldNotBeNull();
+        It the_injected_logger_has_a_name_corresponding_to_the_type_it_is_being_injected_into = () => classWithDependency.SecondLevel.ThirdLevel.Logger.Logger.Name.ShouldEqual(typeof (ThirdLevel).FullName);
+
+        It the_injected_logger_is_not_null = () => classWithDependency.SecondLevel.ThirdLevel.Logger.ShouldNotBeNull();
     }
 }

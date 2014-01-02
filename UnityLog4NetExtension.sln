@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLog4NetExtension", "UnityLog4NetExtension\UnityLog4NetExtension.csproj", "{F689CC78-232B-4E2B-8799-2CFB58FD1695}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLog4NetExtension.Specs", "UnityLog4NetExtension.Specs\UnityLog4NetExtension.Specs.csproj", "{83BC3A6D-9DB3-4BFA-817A-9BB4128BD357}"
@@ -10,6 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{78427C
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E8EA7711-0739-4F16-8A39-D969A449CB71}"
+	ProjectSection(SolutionItems) = preProject
+		keypair.snk = keypair.snk
 	EndProjectSection
 EndProject
 Global
