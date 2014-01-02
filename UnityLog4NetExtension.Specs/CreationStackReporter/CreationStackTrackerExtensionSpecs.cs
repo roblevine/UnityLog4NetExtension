@@ -3,7 +3,7 @@
 // This software is licensed under the MIT License
 // 
 // 
-// Copyright (C) 2012-13, Rob Levine
+// Copyright (C) 2012-14, Rob Levine
 // 
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
@@ -38,60 +38,35 @@ using UnityLog4NetExtension.CreationStackTracker;
 namespace UnityLog4NetExtension.Specs.CreationStackReporter
 {
     [Subject(typeof (CreationStackReporterExtension))]
-    public class when_a_class_with_a_single_ctor_param_of_UnityObjectCreationStack_is_constructed :
-        CreationStackReporterSpecsContext
+    public class when_a_class_with_a_single_ctor_param_of_UnityObjectCreationStack_is_constructed : CreationStackReporterSpecsContext
     {
-        private Because because =
-            () =>
-            {
-                classRequiringInterceptedDependency = unityContainer.Resolve<IClassWithUnityObjectCreationStack>();
-            };
+        Establish establish = () => unityContainer.RegisterType<IClassWithUnityObjectCreationStack, ClassWithCtor_UnityObjectCreationStack>();
 
-        private Establish establish =
-            () =>
-            {
-                unityContainer.RegisterType<IClassWithUnityObjectCreationStack, ClassWithCtor_UnityObjectCreationStack>();
-            };
+        Because because = () => classRequiringInterceptedDependency = unityContainer.Resolve<IClassWithUnityObjectCreationStack>();   
 
-        private It stack_should_not_be_null =
-            () => classRequiringInterceptedDependency.UnityObjectCreationStack.ShouldNotBeNull();
+        It stack_should_not_be_null = () => classRequiringInterceptedDependency.UnityObjectCreationStack.ShouldNotBeNull();
 
-        private It then_current_item_on_call_stack_should_be_the_UnityObjectCreationStack_class_being_createdd =
-            () =>
-                classRequiringInterceptedDependency.UnityObjectCreationStack.Peek(0)
-                    .FullName.ShouldEqual(typeof (UnityObjectCreationStack).FullName);
+        It then_current_item_on_call_stack_should_be_the_UnityObjectCreationStack_class_being_created = () => 
+            classRequiringInterceptedDependency.UnityObjectCreationStack.Peek(0)
+                .FullName.ShouldEqual(typeof (UnityObjectCreationStack).FullName);
 
-        private It then_previous_item_on_call_stack_should_be_the_parent_class_requiring_this_dependency =
-            () =>
-                classRequiringInterceptedDependency.UnityObjectCreationStack.Peek(1)
+        It then_previous_item_on_call_stack_should_be_the_parent_class_requiring_this_dependency = () => 
+            classRequiringInterceptedDependency.UnityObjectCreationStack.Peek(1)
                     .FullName.ShouldEqual(typeof (ClassWithCtor_UnityObjectCreationStack).FullName);
     }
 
     [Subject(typeof (CreationStackReporterExtension))]
-    public class when_a_class_with_a_two_ctor_param_of_string_and_UnityObjectCreationStack__is_constructed :
-        CreationStackReporterSpecsContext
+    public class when_a_class_with_a_two_ctor_param_of_string_and_UnityObjectCreationStack_is_constructed : CreationStackReporterSpecsContext
     {
-        private Because because =
-            () =>
-            {
-                classRequiringInterceptedDependency = unityContainer.Resolve<IClassWithUnityObjectCreationStack>();
-            };
+        Establish establish = () => unityContainer.RegisterType<IClassWithUnityObjectCreationStack, ClassWithCtor_SimpleDependency_UnityObjectCreationStack>();
 
-        private Establish establish =
-            () =>
-            {
-                unityContainer
-                    .RegisterType
-                    <IClassWithUnityObjectCreationStack, ClassWithCtor_SimpleDependency_UnityObjectCreationStack>();
-            };
+        Because because = () => classRequiringInterceptedDependency = unityContainer.Resolve<IClassWithUnityObjectCreationStack>();
 
-        private It then_current_item_on_call_stack_should_be_the_UnityObjectCreationStack_class_being_createdd =
-            () =>
+        It then_current_item_on_call_stack_should_be_the_UnityObjectCreationStack_class_being_created = () =>
                 classRequiringInterceptedDependency.UnityObjectCreationStack.Peek(0)
                     .FullName.ShouldEqual(typeof (UnityObjectCreationStack).FullName);
 
-        private It then_previous_item_on_call_stack_should_be_the_parent_class_requiring_this_dependency =
-            () =>
+        It then_previous_item_on_call_stack_should_be_the_parent_class_requiring_this_dependency = () =>
                 classRequiringInterceptedDependency.UnityObjectCreationStack.Peek(1)
                     .FullName.ShouldEqual(typeof (ClassWithCtor_SimpleDependency_UnityObjectCreationStack).FullName);
     }
@@ -104,7 +79,7 @@ namespace UnityLog4NetExtension.Specs.CreationStackReporter
 
         protected static IClassWithUnityObjectCreationStack classRequiringInterceptedDependency;
 
-        protected Establish establish = () =>
+        Establish establish = () =>
         {
             unityContainer = new UnityContainer();
             unityContainer.AddNewExtension<CreationStackReporterExtension>();
@@ -118,30 +93,30 @@ namespace UnityLog4NetExtension.Specs.CreationStackReporter
         private static TopLevel topLevelClass;
         private static ThirdLevel thirdLevelClass;
 
-        private Because because = () =>
-        {
-            topLevelClass = unityContainer.Resolve<TopLevel>();
-            thirdLevelClass = topLevelClass.SecondLevel.ThirdLevel;
-        };
-
-        private It dependency_being_created_sees_its_immediate_parent_as_third_level_class =
-            () => thirdLevelClass.UnityObjectCreationStack.Peek(1).FullName.ShouldEqual(typeof (ThirdLevel).FullName);
-
-        private It dependency_being_created_sees_the_top_of_the_creation_stack_as_itself =
-            () =>
-                thirdLevelClass.UnityObjectCreationStack.Peek(0)
-                    .FullName.ShouldEqual(typeof (UnityObjectCreationStack).FullName);
-
-        private Establish establish = () =>
+        Establish establish = () =>
         {
             unityContainer = new UnityContainer();
             unityContainer.AddNewExtension<CreationStackReporterExtension>();
         };
 
-        private It third_level_class_sees_its_grandparent_as_top_level_class =
+        Because because = () =>
+        {
+            topLevelClass = unityContainer.Resolve<TopLevel>();
+            thirdLevelClass = topLevelClass.SecondLevel.ThirdLevel;
+        };
+
+        It dependency_being_created_sees_its_immediate_parent_as_third_level_class =
+            () => thirdLevelClass.UnityObjectCreationStack.Peek(1).FullName.ShouldEqual(typeof (ThirdLevel).FullName);
+
+        It dependency_being_created_sees_the_top_of_the_creation_stack_as_itself =
+            () =>
+                thirdLevelClass.UnityObjectCreationStack.Peek(0)
+                    .FullName.ShouldEqual(typeof (UnityObjectCreationStack).FullName);
+
+        It third_level_class_sees_its_grandparent_as_top_level_class =
             () => thirdLevelClass.UnityObjectCreationStack.Peek(3).FullName.ShouldEqual(typeof (TopLevel).FullName);
 
-        private It third_level_class_sees_its_immediate_parent_as_second_level_class =
+        It third_level_class_sees_its_immediate_parent_as_second_level_class =
             () => thirdLevelClass.UnityObjectCreationStack.Peek(2).FullName.ShouldEqual(typeof (SecondLevel).FullName);
     }
 }
