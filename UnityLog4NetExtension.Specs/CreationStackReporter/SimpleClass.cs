@@ -1,9 +1,8 @@
-﻿#region Copyright & License
-
+﻿#region Copyright & Licence
 // This software is licensed under the MIT License
 // 
 // 
-// Copyright (C) 2012-14, Rob Levine
+// Copyright (C) 2012-15, Rob Levine
 // 
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
@@ -27,9 +26,7 @@
 // IN THE SOFTWARE.
 // 
 // [Source code: https://github.com/roblevine/UnityLoggingExtensions]
-
 #endregion
-
 namespace UnityLog4NetExtension.Specs.CreationStackReporter
 {
     public class SimpleClass
