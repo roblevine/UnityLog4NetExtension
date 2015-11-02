@@ -86,8 +86,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="createNugetPackage.cmd" />
     <None Include="keypair.snk" />
     <None Include="packages.config" />
+    <None Include="UnityLog4NetExtension.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

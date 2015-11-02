@@ -10,8 +10,14 @@
     <licenseUrl>https://github.com/roblevine/UnityLoggingExtensions/blob/master/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial NuGet package.</releaseNotes>
-    <copyright>Copyright 2012</copyright>
+    <releaseNotes>This version (2.x.x.x) of the extension is for use with Unity v4 and higher.</releaseNotes>
+    <copyright>Copyright 2012-2015</copyright>
     <tags>Unity Log4Net</tags>
+    <dependencies>
+      <group>
+        <dependency id="Unity" version="4.0.0" />
+        <dependency id="log4net" version="2.0.0" />
+      </group>
+    </dependencies>
   </metadata>
 </package>
