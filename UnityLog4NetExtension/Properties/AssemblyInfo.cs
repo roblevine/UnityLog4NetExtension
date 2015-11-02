@@ -38,7 +38,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("UnityLog4NetExtension")]
-[assembly: AssemblyDescription("A simple extension to Unity that enables log4net ILog dependencies to be injected into consuming classes, with the ILog instance being configured as the correct logger for the consuming class.")]
+[assembly: AssemblyDescription("A simple extension to Unity that enables log4net ILog dependencies to be injected into consuming classes, with the ILog insance being configured as the correct logger for the consuming class. This version (1.x.x.x) of the extension is for use with Unity versions prior to v4.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("INEX Solutions Ltd")]
 [assembly: AssemblyProduct("UnityLog4NetExtension")]
@@ -65,5 +65,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("1.2.0.0")]
-[assembly: AssemblyFileVersion("1.2.0.0")]
+[assembly: AssemblyVersion("1.2.1.0")]
+[assembly: AssemblyFileVersion("1.2.1.0")]
