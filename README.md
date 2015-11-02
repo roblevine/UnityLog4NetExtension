@@ -1,3 +1,9 @@
+***Note on Unity versions and branches***
+
+The `unity-pre-4` branch contains the version of this extension for use with with Unity versions prior to 4.
+
+The `unity-4` branch contains the version of this extension for use with with Unity version 4 and higher.
+
 **UnityLoggingExtensions**
 
 This library was born out of a desire to have a simple extension to Unity that would enable log4net `ILog` dependencies to be injected into consuming classes, with the ILog instance being the configured as the correct logger for the consuming class.
