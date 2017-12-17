@@ -27,8 +27,9 @@
 // 
 // [Source code: https://github.com/roblevine/UnityLoggingExtensions]
 #endregion
-using Microsoft.Practices.Unity;
-using Microsoft.Practices.Unity.ObjectBuilder;
+using Unity.Builder;
+using Unity.Extension;
+using Unity.Strategy;
 using UnityLog4NetExtension.CreationStackTracker;
 
 namespace UnityLog4NetExtension.Log4Net

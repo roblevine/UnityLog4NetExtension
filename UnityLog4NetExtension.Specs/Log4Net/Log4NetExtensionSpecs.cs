@@ -28,7 +28,7 @@
 // [Source code: https://github.com/roblevine/UnityLoggingExtensions]
 #endregion
 using Machine.Specifications;
-using Microsoft.Practices.Unity;
+using Unity;
 using UnityLog4NetExtension.Log4Net;
 
 namespace UnityLog4NetExtension.Specs.Log4Net

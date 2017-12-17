@@ -29,6 +29,7 @@
 #endregion
 using Machine.Specifications;
 using Microsoft.Practices.Unity;
+using Unity;
 using UnityLog4NetExtension.CreationStackReporter;
 using UnityLog4NetExtension.CreationStackTracker;
 

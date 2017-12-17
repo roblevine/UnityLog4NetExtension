@@ -28,7 +28,7 @@
 // [Source code: https://github.com/roblevine/UnityLoggingExtensions]
 #endregion
 using System;
-using Microsoft.Practices.ObjectBuilder2;
+using Unity.Policy;
 
 namespace UnityLog4NetExtension.CreationStackTracker
 {

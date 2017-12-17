@@ -29,7 +29,10 @@
 #endregion
 using System;
 using System.Linq;
-using Microsoft.Practices.ObjectBuilder2;
+using Unity.Builder;
+using Unity.Builder.Strategy;
+using Unity.Policy;
+using UnityLog4NetExtension.Utils;
 
 namespace UnityLog4NetExtension.CreationStackTracker
 {
