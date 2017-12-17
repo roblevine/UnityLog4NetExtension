@@ -2,7 +2,7 @@
 // This software is licensed under the MIT License
 // 
 // 
-// Copyright (C) 2012-15, Rob Levine
+// Copyright (C) 2012-17, Rob Levine
 // 
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
@@ -27,6 +27,7 @@
 // 
 // [Source code: https://github.com/roblevine/UnityLoggingExtensions]
 #endregion
+
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -39,7 +40,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("INEX Solutions Ltd")]
 [assembly: AssemblyProduct("UnityLog4NetExtension")]
-[assembly: AssemblyCopyright("Copyright © INEX Solutions Ltd 2012-2015")]
+[assembly: AssemblyCopyright("Copyright © INEX Solutions Ltd 2012-2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -62,5 +63,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("2.0.1.0")]
-[assembly: AssemblyFileVersion("2.0.1.0")]
+[assembly: AssemblyVersion("5.0.0.0")]
+[assembly: AssemblyFileVersion("5.0.0.0")]

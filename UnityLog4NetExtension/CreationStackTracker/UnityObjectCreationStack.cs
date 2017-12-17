@@ -2,7 +2,7 @@
 // This software is licensed under the MIT License
 // 
 // 
-// Copyright (C) 2012-15, Rob Levine
+// Copyright (C) 2012-17, Rob Levine
 // 
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
@@ -27,6 +27,7 @@
 // 
 // [Source code: https://github.com/roblevine/UnityLoggingExtensions]
 #endregion
+
 using System;
 using System.Collections.Generic;
 

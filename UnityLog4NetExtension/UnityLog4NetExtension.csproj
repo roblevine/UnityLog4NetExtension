@@ -41,7 +41,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>keypair.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>UnityLog4NetExtension.KeyPair.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonServiceLocator, Version=2.0.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
@@ -95,8 +95,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="createNugetPackage.cmd" />
-    <None Include="keypair.snk" />
     <None Include="packages.config" />
+    <None Include="UnityLog4NetExtension.KeyPair.snk" />
     <None Include="UnityLog4NetExtension.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

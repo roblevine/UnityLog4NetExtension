@@ -6,7 +6,7 @@
 	<s:String x:Key="/Default/CodeStyle/FileHeader/FileHeaderText/@EntryValue">This software is licensed under the MIT License&#xD;
 &#xD;
 &#xD;
-Copyright (C) 2012-15, Rob Levine&#xD;
+Copyright (C) 2012-17, Rob Levine&#xD;
 &#xD;
 &#xD;
 Permission is hereby granted, free of charge, to any person obtaining a copy &#xD;
@@ -31,6 +31,7 @@ IN THE SOFTWARE.&#xD;
 &#xD;
 [Source code: https://github.com/roblevine/UnityLoggingExtensions]</s:String>
 	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/UserRules/=cb7348ce_002D9c78_002D40bb_002D905f_002D1ad076369634/@EntryIndexedValue">&lt;Policy&gt;&lt;Descriptor Staticness="Static, Instance" AccessRightKinds="Private, Protected, ProtectedInternal, Internal, Public" Description="Machine.Specifications Rules"&gt;&lt;ElementKinds&gt;&lt;Kind Name="Machine.Specifications_Behavior" /&gt;&lt;Kind Name="Machine.Specifications_Context" /&gt;&lt;Kind Name="Machine.Specifications_ContextBase" /&gt;&lt;Kind Name="Machine.Specifications_Specification" /&gt;&lt;Kind Name="Machine.Specifications_SupportingField" /&gt;&lt;Kind Name="Machine.Specifications_Field" /&gt;&lt;Kind Name="Machine.Specifications_Constant" /&gt;&lt;Kind Name="Machine.Specifications_Local" /&gt;&lt;/ElementKinds&gt;&lt;/Descriptor&gt;&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aa_bb" /&gt;&lt;/Policy&gt;</s:String>
+	<s:String x:Key="/Default/Environment/Hierarchy/PsiConfigurationSettingsKey/CustomLocation/@EntryValue">C:\Users\RobertLevine\AppData\Local\JetBrains\Transient\ReSharperPlatformVs15\v09_fa36d9e8\SolutionCaches</s:String>
 	<s:String x:Key="/Default/FilterSettingsManager/CoverageFilterXml/@EntryValue">&lt;data&gt;&lt;IncludeFilters /&gt;&lt;ExcludeFilters /&gt;&lt;/data&gt;</s:String>
 	<s:String x:Key="/Default/FilterSettingsManager/AttributeFilterXml/@EntryValue">&lt;data /&gt;</s:String>
 	<s:Boolean x:Key="/Default/StyleCopOptions/InsertTextIntoDocumentation/@EntryValue">False</s:Boolean></wpf:ResourceDictionary>
