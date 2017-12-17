@@ -1,9 +1,8 @@
-﻿#region Copyright & License
-
+﻿#region Copyright & Licence
 // This software is licensed under the MIT License
 // 
 // 
-// Copyright (C) 2012-14, Rob Levine
+// Copyright (C) 2012-15, Rob Levine
 // 
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
@@ -27,9 +26,7 @@
 // IN THE SOFTWARE.
 // 
 // [Source code: https://github.com/roblevine/UnityLoggingExtensions]
-
 #endregion
-
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -38,11 +35,11 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("UnityLog4NetExtension")]
-[assembly: AssemblyDescription("A simple extension to Unity that enables log4net ILog dependencies to be injected into consuming classes, with the ILog instance being configured as the correct logger for the consuming class.")]
+[assembly: AssemblyDescription("A simple extension to Unity that enables log4net ILog dependencies to be injected into consuming classes, with the ILog instance being configured as the correct logger for the consuming class. This version (2.x.x.x) of the extension is for use with Unity v4 and higher.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("INEX Solutions Ltd")]
 [assembly: AssemblyProduct("UnityLog4NetExtension")]
-[assembly: AssemblyCopyright("Copyright © INEX Solutions Ltd 2012")]
+[assembly: AssemblyCopyright("Copyright © INEX Solutions Ltd 2012-2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -65,5 +62,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("1.1.0.0")]
-[assembly: AssemblyFileVersion("1.1.0.0")]
+[assembly: AssemblyVersion("2.0.1.0")]
+[assembly: AssemblyFileVersion("2.0.1.0")]
