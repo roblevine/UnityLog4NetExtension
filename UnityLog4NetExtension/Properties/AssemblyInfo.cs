@@ -63,7 +63,7 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("5.0.0.0")]
-[assembly: AssemblyFileVersion("5.0.0.0")]
+[assembly: AssemblyVersion("5.0.1.0")]
+[assembly: AssemblyFileVersion("5.0.1.0")]
 
 [assembly: AssemblyKeyFileAttribute(@"d:\git\UnityLog4NetExtension\keys\UnityLog4NetExtension.KeyPair.snk")]
