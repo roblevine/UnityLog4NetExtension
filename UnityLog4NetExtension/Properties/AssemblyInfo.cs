@@ -66,5 +66,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("5.0.0.0")]
 [assembly: AssemblyFileVersion("5.0.0.0")]
 
-[assembly: AssemblyKeyFileAttribute("..\\keys\\UnityLog4NetExtension.Pubkey.snk")]
-[assembly: AssemblyDelaySignAttribute(true)]
+[assembly: AssemblyKeyFileAttribute(@"d:\git\UnityLog4NetExtension\keys\UnityLog4NetExtension.KeyPair.snk")]
