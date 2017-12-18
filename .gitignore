@@ -163,5 +163,6 @@ pip-log.txt
 # Mac crap
 .DS_Store
 *.ncrunch*
-*.snk
 .vs/UnityLog4NetExtension/v15/Server/sqlite3/
+UnityLog4NetExtension/UnityLog4NetExtension.KeyPair.snk
+keys/UnityLog4NetExtension.KeyPair.snk

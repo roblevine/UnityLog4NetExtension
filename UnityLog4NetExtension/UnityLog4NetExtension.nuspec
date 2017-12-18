@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
+    <id>UnityLog4NetExtension</id>
+    <version>5.0.0.0</version>
+    <title>UnityLog4NetExtension</title>
     <authors>Rob Levine</authors>
     <owners>Rob Levine</owners>
     <projectUrl>http://blog.roblevine.co.uk/net/using-log4net-with-unity/</projectUrl>
     <licenseUrl>https://github.com/roblevine/UnityLoggingExtensions/blob/master/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
+    <description>A simple extension to Unity that enables log4net ILog dependencies to be injected into consuming classes, with the ILog instance being configured as the correct logger for the consuming class.</description>
     <releaseNotes>This version (5.x.x.x) of the extension is for use with Unity v5.</releaseNotes>
     <copyright>Copyright 2012-2017</copyright>
     <tags>Unity Log4Net</tags>
@@ -20,4 +20,8 @@
       </group>
     </dependencies>
   </metadata>
+      <files>
+        <file src="bin\Debug\UnityLog4NetExtension.dll" target="lib\net45" />
+        <file src="bin\Debug\UnityLog4NetExtension.pdb" target="lib\net45" />
+    </files>
 </package>
