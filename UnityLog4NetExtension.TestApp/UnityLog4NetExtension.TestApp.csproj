@@ -67,9 +67,8 @@
     <Reference Include="Unity.ServiceLocation, Version=2.0.8.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.5.3.2\lib\net45\Unity.ServiceLocation.dll</HintPath>
     </Reference>
-    <Reference Include="UnityLog4NetExtension, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\UnityLog4NetExtension.dll</HintPath>
+    <Reference Include="UnityLog4NetExtension">
+      <HintPath>..\..\..\temp\UnityLog4NetExtension.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
