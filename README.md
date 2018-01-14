@@ -1,4 +1,4 @@
-**Note: this extension is retired for Unity 5 and higher. Please use the official [Unity Log4Net extension](https://github.com/unitycontainer/log4net) instead **
+**Note: this extension is retired for Unity 5 and higher. Please use the official [Unity Log4Net extension](https://github.com/unitycontainer/log4net) instead**
 
 ***Note on Unity versions and branches***
 
